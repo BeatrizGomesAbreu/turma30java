@@ -7,18 +7,18 @@ public class CadAluno {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
-		String alunes[] = { "Ana Beatriz Yujra Espejo", "Ana Carolina G. Souza  ", "Ana Paula Souza Dias  ",
-				"Anderson Coelho da Costa", "Andrei Felipe Corrêa de Souza", "Ariel de Barros Pirangy Soares",
-				"Beatriz dos Santos Teixeira", "Beatriz Gomes de Abreu", "Caio Saldanha Motta",
-				"Cássia de A. N. Santos", "Emerson da Silva Santana", "Enzo Fulaneto  ", "Ester Gomes Neves Nascimento",
+		String alunes[] = {"Ana Beatriz Y. Espejo", "Ana Carolina G. Souza", "Ana Paula Souza Dias",
+				"Anderson Coelho Costa", "Andrei Felipe C. Souza", "Ariel B. Pirangy Soares",
+				"Beatriz S. Teixeira", "Beatriz Gomes de Abreu", "Caio Saldanha Motta",
+				"Cássia de A. N. Santos", "Emerson Silva Santana", "Enzo Fulaneto\t", "Ester G. N. Nascimento",
 				"Fábio Campaner Suzuki", "Felipe Matos de Lima", "Felipe Souza da Silva", "Flávio Augusto da Costa",
-				"Giovanna Siqueira Paiva dos Penedos", "Gustavo Mesquita Ferreira", "Henrique Uriel Lopes",
-				"João Pedro Cruz Gomes", "José P. M. F. Neto", "Letícia Porto Martins", "Lucas Silva Nunes de Aguiar",
-				"Maicon Gomes Cerqueira", "Marcos Vinicius Coutinho Rego", "Matheus de Araujo Farina",
-				"Matheus de Brito Milani", "Natália R. S. Rocha", "Pamela Paulino", "Renata dos Santos Ferreira",
-				"Rodrigo Roseo Lopes da Costa", "Sabrina Alves de Paiva", "Sergio de Jesus Severo",
-				"Stefani F. P. Tosi", "Talita g. m. g. Lima ", "Thiago da Silva Machado", "Vinícios Lisboa da Silva",
-				"Vinicius C. S. Francisco" };
+				"Giovanna S. P. Penedos", "Gustavo M. Ferreira", "Henrique Uriel Lopes",
+				"João Pedro Cruz Gomes", "José P. M. F. Neto", "Letícia Porto Martins", "Lucas S. N. Aguiar",
+				"Maicon Gomes Cerqueira", "Marcos Vinicius C. Rego", "Matheus Araujo Farina",
+				"Matheus de Brito Milani", "Natália R. S. Rocha", "Pamela Paulino\t", "Renata S. Ferreira",
+				"Rodrigo R. L. Costa", "Sabrina Alves de Paiva", "Sergio de Jesus Severo",
+				"Stefani F. P. Tosi", "Talita g. m. g. Lima ", "Thiago da Silva Machado", "Vinícios L. Silva",
+				"Vinicius C. Silva"};
 		int notas[] = new int[alunes.length], auxNotas; // Mat - 0x
 		String matriculas[] = new String[alunes.length];
 		boolean ativo[] = new boolean[alunes.length]; // true
@@ -48,7 +48,8 @@ public class CadAluno {
 		System.out.println("MATRICULA\tALUNES\t\t\tNOTAS\tSTATUS");
 		for (int x = 0; x < alunes.length; x++) {
 			if (ativo[x] == true) {
-				System.out.println(matriculas[x] + "\t" + alunes[x] + "\t" + notas[x] + "\t" + ativo[x]);
+				System.out.println(matriculas[x] + "\t" + alunes[x] + "\t" + notas[x] + "\t" + "\tAtivo");
+				//((ativo[x]==true)?"ATIVO":"INATIVO") operador tenario
 			}
 		}
 
