@@ -2,12 +2,38 @@ package lista5;
 
 public class Animal {
 
-	private boolean vivo;
+	private String nome;
 	private int idade;
-	private String especie;
-	public Animal(String especie) {
+	private boolean som;
+	
+	public Animal(String nome) {
 		super();
-		this.especie = especie;
+		this.nome = nome;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public boolean isSom() {
+		return som;
+	}
+
+	public void emiteSom() {
+		System.out.println("Emitindo som...");
+	}
+
 	
 }
