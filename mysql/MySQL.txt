@@ -1,0 +1,82 @@
+MySQL exerc.1:
+
+create db_rh
+use db_rh
+
+CRIANDO TABELA:
+
+create table tb_funcionaries (id bigint(5) auto_increment, nome varchar(5) not null, ativo boolean, primary key (id))
+select * from tb_funcionaries
+
+use db_rh;
+create table tb_funcionaries(
+ id  bigint , 
+ nome varchar (30) not null,
+ setor varchar (20),
+ cargo varchar (20),
+ salario decimal (10, 2)
+)
+
+insert into tb_funcionaries(id, nome, setor, cargo, salario)
+values (01, "Ana", "Analise", "Analista de credito", 1800.00),
+(02, "Maria", "Analise", "Supervisora",2800.00),
+(03, "Jose", "ADM", "Aux escritorio", 1500.00),
+(04, "Diego", "ADM", "Diretor", 5400.00),
+(05, "Renata", "ADM", "Diretora", 5300.00)
+
+select * from tb_alunes
+select * from tb_alunes where nota > 0.7
+select * from tb_alunes where nota < 0.7
+select * from tb_funcionaries
+select * from tb_funcionaries where salario > 2000.00
+select * from tb_funcionaries where salario < 2000.00
+
+Exerc.2:
+
+creat database db_ecommerc
+
+tabela: 
+
+use db_ecommerc;
+
+create table tb_produtos(
+ codigo bigint , 
+ nome varchar (30) not null,
+ fabricante varchar (20),
+  edicao varchar (20),
+ preco decimal (10, 2)
+)
+insert into tb_produtos(codigo, nome, fabricante, edicao, preco)
+
+values(01, "Revista Veja", "ED Abril", "05", 15.00)
+values(02, "Revista Caras", "ED Abril", "18", 20.00)
+values(03, "Revista Claudia", "ED Caras", "18", 35.00)
+values(04, "Revista Contigo", "ED Sete", "18", 25.00)
+values(05, "Revista Capricho", "ED Veja", "18", 40.00)
+select * from tb_produtos
+select * from tb_produtos where salario > 2000.00
+select * from tb_produtos where salario < 2000.00
+
+Exec.3:
+
+create database db_escola
+use db_escola;
+
+create table tb_alunes(
+
+mat bigint,
+nome varchar(30),
+serie bigint,
+idade bigint,
+nota decimal(2,2)
+)
+
+insert into tb_alunes(mat, nome, serie, idade, nota)
+values (057, "Matheus Milani", 1, 6, 0.5),
+(058, "Bruna Lima", 2, 8, 0.7),
+(059, "Heitor Gomes", 3, 9, 0.8),
+(060, "Emilly Victoria", 9, 14, 0.9),
+(061, "Victor Oliveira", 1, 7, 0.6)
+select * from tb_alunes
+select * from tb_alunes where nota > 0.7
+select * from tb_alunes where nota < 0.7
