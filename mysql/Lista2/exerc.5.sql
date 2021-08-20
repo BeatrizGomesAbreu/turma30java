@@ -1,19 +1,19 @@
-CREATE DATABASE db_cidade_das_carnes;
-USE db_cidade_das_carnes;
+CREATE DATABASE db_construindo_a_nossa_vida;
+USE db_construindo_a_nossa_vida;
 
 CREATE TABLE tb_categoria (
     id INT NOT NULL AUTO_INCREMENT,
     tipo VARCHAR(25) NOT NULL,
-    corte BOOLEAN NOT NULL,
+    peso VARCHAR(25) NOT NULL,
     PRIMARY KEY (id)
 )  ENGINE=INNODB;
 
-INSERT INTO tb_categoria(tipo, corte) 
-	VALUES ("Aves", false),("Suina", true),("Bovinas", true),("Outros", false),("Doces", false);
+INSERT INTO tb_categoria(tipo, peso) 
+	VALUES ("Ferragem","Médio/Pesado"),("Eletrica", "Leve/Médio"),("Hidraulica", "Leve/Médio");
 
 CREATE TABLE tb_produto (
     id INT NOT NULL AUTO_INCREMENT,
-    valor DECIMAL(4 , 2 ) NOT NULL,
+    valor DECIMAL(5,2) NOT NULL,
     nome VARCHAR(20) NOT NULL,
     estoque INT NOT NULL,
     id_categoria INT NOT NULL,
@@ -23,8 +23,8 @@ CREATE TABLE tb_produto (
 )  ENGINE=INNODB;
 
 INSERT INTO tb_produto(valor, nome, estoque, id_categoria)
-	VALUES (15.50, "File de Frango", 40, 1),(20.00, "Linguiça", 40, 2),(25.00, "Bacon", 40, 2),(8.50, "Sal Grosso", 40, 3),
-	(3.50, "Pé de moça", 40, 5),(9.00, "Farofa", 40, 4),(19.70, "Coração de Galinha", 40, 1),(20.50, "Barriga", 40, 2);
+	VALUES (30.00, "Sapata", 50, 1), (69.00, "Coluna", 50, 1),(42.00, "Conduite", 50, 2),
+        (258.00, "Rolo de Fio", 50, 2),(14.00, "Luva", 50, 3);
     
 SELECT * FROM tb_produto 
     WHERE valor > 50;
