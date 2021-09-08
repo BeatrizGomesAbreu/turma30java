@@ -1,19 +1,21 @@
-package org.generation.blogPessoal.service;
+package com.games.lojaGames.service;
+
+import com.games.lojaGames.repository.UsuarioRepository;
+import com.games.lojaGames.model.UserLogin;
+import com.games.lojaGames.model.Usuario;
+import org.apache.commons.codec.binary.Base64;
 
 import java.nio.charset.Charset;
 import java.util.Optional;
 
-import org.apache.commons.codec.binary.Base64;
-import org.generation.blogPessoal.model.UserLogin;
-import org.generation.blogPessoal.model.Usuario;
-import org.generation.blogPessoal.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
-	
+
+
 	@Autowired
 	private UsuarioRepository repository;
 
