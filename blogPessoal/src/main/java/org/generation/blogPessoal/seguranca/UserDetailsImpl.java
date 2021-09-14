@@ -11,7 +11,6 @@ public class UserDetailsImpl implements UserDetails{
 	private static final long serialVersionUID = 1L;
 	
 	private String userName;
-	
 	private String password;
 	
 	public UserDetailsImpl(Usuario user) {
@@ -62,5 +61,5 @@ public class UserDetailsImpl implements UserDetails{
 		// TODO Auto-generated method stub
 		return true;
 	}
-
+	
 }

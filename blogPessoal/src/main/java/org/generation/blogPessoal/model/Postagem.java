@@ -15,67 +15,70 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @Entity
-@Table
+@Table(name="postagem")
 public class Postagem {
+		
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		private long id;
+		
+		@NotNull
+		@Size(min =5,max =100)
+		private String titulo;
+		
+		@NotNull
+		@Size(min =10,max =500)
+		private String texto;
+		
+		@Temporal(TemporalType.TIMESTAMP)
+		private Date data = new java.sql.Date(System.currentTimeMillis());
+		
+		@ManyToOne
+		@JsonIgnoreProperties("postagem")
+		private Tema tema;
+		
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
 
-	@NotNull
-	@Size(min = 5, max = 100)
-	private String titulo;
+		public Tema getTema() {
+			return tema;
+		}
 
-	@NotNull
-	@Size(min = 10, max = 500)
-	private String texto;
+		public void setTema(Tema tema) {
+			this.tema = tema;
+		}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date date = new java.sql.Date(System.currentTimeMillis());
+		public long getId() {
+			return id;
+		}
 
-	@ManyToOne
-	@JsonIgnoreProperties("postagem")
-	private Tema tema;
+		public void setId(long id) {
+			this.id = id;
+		}
 
-	public long getId() {
-		return id;
-	}
+		public String getTitulo() {
+			return titulo;
+		}
 
-	public void setId(long id) {
-		this.id = id;
-	}
+		public void setTitulo(String titulo) {
+			this.titulo = titulo;
+		}
 
-	public String getTitulo() {
-		return titulo;
-	}
+		public String getTexto() {
+			return texto;
+		}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+		public void setTexto(String texto) {
+			this.texto = texto;
+		}
 
-	public String getTexto() {
-		return texto;
-	}
+		public Date getData() {
+			return data;
+		}
 
-	public void setTexto(String texto) {
-		this.texto = texto;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public Tema getTema() {
-		return tema;
-	}
-
-	public void setTema(Tema tema) {
-		this.tema = tema;
-	}
+		public void setData(Date data) {
+			this.data = data;
+		}		
 
 }
